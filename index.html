@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Word Counter</title>
+  <style>
+    /* Add some basic styling */
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    /* Style the button */
+    #increment-button {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+    }
+
+    /* Style the count */
+    #count {
+      font-size: 24px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Word Counter</h1>
+  <p>The word "dygresja" has been used: <span id="count">0</span> times.</p>
+  <button id="increment-button">Increment</button>
+
+  <script>
+    // Get the elements we need to work with
+    var countElement = document.getElementById("count");
+    var incrementButton = document.getElementById("increment-button");
+
+    // Set the initial count to 0
+    var count = 0;
+
+    // Add an event listener to the button
+    incrementButton.addEventListener("click", function() {
+      // Increment the count
+      count++;
+
+      // Update the count element on the page
+      countElement.innerHTML = count;
+    });
+  </script>
+</body>
+</html>
